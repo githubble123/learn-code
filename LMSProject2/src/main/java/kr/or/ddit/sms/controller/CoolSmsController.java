@@ -46,14 +46,14 @@ public class CoolSmsController {
 
 		log.info("toList : " + toList.toString());
 
-		String api_key = "NCSPAQELCAQ78T5C";
-		String api_secret = "MPVSOZLRPBFGFAWLSVHGE5RV0CRKD3RG";
+		String api_key = "NCSPAQELCAQ78T5CQ";
+		String api_secret = "MPVSOZLRPBFGFAWLSVHGE5RV0CRKD3RGQ";
 		Message coolsms = new Message(api_key, api_secret);
 
 		HashMap<String, String> smsMap = new HashMap<String, String>();
 		for(Map<String, Object> to : toList) {
 			smsMap.put("to", to.get("phone").toString()); // 수신번호
-			smsMap.put("from", "01044372923"); // 발신번호
+			smsMap.put("from", "010xxxxxxxx"); // 발신번호
 			smsMap.put("text", to.get("smsContent").toString()); // 문자내용
 			smsMap.put("type", "sms"); // 문자 타입
 			smsMap.put("app_version", "test app 1.2");
